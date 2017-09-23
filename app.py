@@ -97,7 +97,7 @@ def makeSearchResult(data):
     extract = xmldoc.getElementsByTagName('extract')[0].childNodes[0].data
 
     # speech = extract
-    if extract.split(".")[0][-1] != ":"
+    if extract.split(".")[0][-1] != ":" :
         if len(extract.split(".")[0].split(" ")) > 3:
             speech = extract.split(".")[0]
         else:
