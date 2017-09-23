@@ -29,7 +29,7 @@ def webhook():
     print("Request:")
     print(json.dumps(req, indent=4))
 
-    if req.get("result").get("action") != "WikipediaSearch":
+    if req.get("result").get("action") == "WikipediaSearch":
         title = search(req)
         res = get_answer(title)
 
@@ -38,7 +38,7 @@ def webhook():
         r.headers['Content-Type'] = 'application/json'
         return r
 
-    if req.get("result").get("action") != "yahooWeatherForecast":
+    if req.get("result").get("action") == "yahooWeatherForecast":
         res = processRequest(req)
 
         res = json.dumps(res, indent=4)
