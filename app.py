@@ -88,7 +88,8 @@ def makeWebhookResult(data):
     extract = xmldoc.getElementsByTagName('extract')[0].childNodes[0].data
 
     speech = extract
-
+    speech = speech.split(".")[0]
+    
     print("Response:")
     print(speech)
 
