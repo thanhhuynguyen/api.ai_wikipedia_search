@@ -92,7 +92,7 @@ def makeDistanceResult(data):
             row = data['rows'][isrc]
             cell = row['elements'][idst]
             if cell['status'] == 'OK':
-                speech = 'i got distance between {} and {} is {}, if you driving , you will loss {}.'.format(src, dst, cell['distance']['text'], cell['duration']['text']))
+                speech = 'i got distance between {} and {} is {}, if you driving , you will loss {}.'.format(src, dst, cell['distance']['text'], cell['duration']['text'])
             else:
                 speech = "i am sorry, i can not got it, maybe you can use your google map"
     # print(json.dumps(item, indent=4))
